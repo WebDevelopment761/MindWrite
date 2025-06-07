@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Note App</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="manifest" href="manifest.json" />
+</head>
+<body>
+  <div class="container">
+    <h1>📔 MindWrite</h1>
+    <button onclick="addNote()">+ Add Note</button>
+    <label class="toggle">
+      <input type="checkbox" id="themeToggle" />
+      <span>🌙 Dark Mode</span>
+    </label>
+    <div id="notes"></div>
+  </div>
+
+  <div id="toast">Note Saved ✅</div>
+
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

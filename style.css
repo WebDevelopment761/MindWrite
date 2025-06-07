@@ -1,0 +1,102 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f0f2f5;
+  transition: background 0.3s, color 0.3s;
+}
+
+body.dark {
+  background: #121212;
+  color: white;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.toggle {
+  margin-bottom: 20px;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button, .toggle span {
+  margin: 5px;
+}
+
+.note {
+  background: #fff;
+  border: 1px solid #ccc;
+  margin: 10px 0;
+  padding: 15px;
+  position: relative;
+  border-radius: 8px;
+  text-align: left;
+  transition: background 0.3s, color 0.3s;
+}
+
+body.dark .note {
+  background: #1e1e1e;
+  border-color: #444;
+}
+
+textarea {
+  width: 100%;
+  border: none;
+  resize: vertical;
+  outline: none;
+  font-size: 16px;
+  height: 80px;
+  padding: 10px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background: inherit;
+  color: inherit;
+}
+
+.delete-btn, .save-btn {
+  position: absolute;
+  top: 10px;
+  padding: 6px 10px;
+  border: none;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.delete-btn {
+  right: 10px;
+  background-color: crimson;
+}
+
+.save-btn {
+  right: 80px;
+  background-color: #007bff;
+}
+
+#toast {
+  visibility: hidden;
+  min-width: 200px;
+  margin-left: -100px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 8px;
+  padding: 10px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 40px;
+  font-size: 16px;
+  transition: visibility 0s, opacity 0.5s linear;
+  opacity: 0;
+}
+
+#toast.show {
+  visibility: visible;
+  opacity: 1;
+}
